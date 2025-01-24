@@ -1,0 +1,48 @@
+{
+  "epoch": 0,
+  "n_epochs": 2,
+  "dataset_name": "facades",
+  "batch_size": 1,
+  "lr": 0.0002,
+  "b1": 0.5,
+  "b2": 0.999,
+  "decay_epoch": 100,
+  "n_cpu": 8,
+  "img_height": 256,
+  "img_width": 256,
+  "channels": 1,
+  "sample_interval": 500,
+  "checkpoint_interval": 1,
+  "plotting_interval": 5,
+  "save_path": "./logs/log160",
+  "log_save_const": 160,
+  "dataset_path": "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false",
+  "N": 10,
+  "train_frac": 0.9,
+  "path_train": [
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_8848.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_9703.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_9569.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_7602.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_7406.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_8556.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_8599.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_7813.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_8899.npz"
+  ],
+  "path_test": [
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Marmousi.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Marmousi_flipped.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Marmousi_spacing800.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Overthrust.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Overthrust_flipped.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Overthrust_spacing800.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Seam.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Seam2.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Seam2_spacing800.npz",
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it__Seam_spacing800.npz"
+  ],
+  "path_valid": [
+    "/home/plotnips/Dropbox/Log_extrapolation/scripts/MWE/datasets/dataset_vl_gen_scaled_3005_smooth_450m_scaler_picture_individual_scaling_false/augmented_marmousi_10_it_7386.npz"
+  ]
+}

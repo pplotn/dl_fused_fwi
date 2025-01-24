@@ -1,0 +1,583 @@
+Start of program time= 2023-03-10 14:32:06.778744
+simulation parameters= {'data_mode': 'cnn_16', 'current_data_type': 'record_cnn_data', 'dx': 25, 'dz': 25, 'out_shape': [496, 150], 'dsrc': 200, 'taper_shift': 0, 'extend_model_x': False, 'last_source_position': 'nx', 'computation_platform': 'workstation', 'gen_mode': 'generator1', 'initial_velocity_models_source': 'generator', 'root_denise': '', 'data_gen_mode': 'pseudo_field', 'full_band': False, 'corner_frequency': 5, 'delete_low_freqs': True, 'NNODES': 1, 'NPROCX': 2, 'NPROCY': 1, 'ncores': 2, 'HOURS': 24}
+Init Python 3 API for Denise-Black-Edition.
+Check binary in /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced/bin/denise
+Parse /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced/par/DENISE_marm_OBC.inp
+Current directory is /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced
+Init paths at ./outputs/
+Current directory is /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced
+Init paths at ./data/gradients/cnn_16/model_0/fld/
+loading vel models from ./data/gradients/cnn_16/model_0/model_0.hdf5
+m/sec
+processing real data= 0
+nx:	496
+nz:	150
+Init model:
+	150 x 496, dx = 25 m
+Init identical gradient tapers for vp, vs and rho, (150, 496)
+Compute DT and NT
+Check elastic ratios:
+	Poisson ratio:		0.2994388440860215
+	Shear wave velocity:	1030.4364660737292
+	Rayleigh velocity:	954.2475371633569
+Check stability:
+	max Vs: 1993.581682939285  m/s
+	max Vp: 3452.98476388951 m/s
+	According to the Courant-Friedrichs-Lewy (CFL) criterion
+	the maximum time step is DT = 3.80e-03 sec
+	Rounded dt = 0.0025
+Check stability:
+	max Vs: 2493.581682939285  m/s
+	max Vp: 4452.98476388951 m/s
+	According to the Courant-Friedrichs-Lewy (CFL) criterion
+	the maximum time step is DT = 2.95e-03 sec
+	Rounded dt = 0.0025
+dt from true velocity models 0.0025
+dt from box constraints 0.0025
+Check stability:
+	max Vs: 2493.581682939285  m/s
+	max Vp: 4452.98476388951 m/s
+	According to the Courant-Friedrichs-Lewy (CFL) criterion
+	the maximum time step is DT = 2.95e-03 sec
+	Rounded dt = 0.0025
+Calculated dt= 0.0025
+Stage 1:
+	{'PRO': 1e-10, 'TIME_FILT': 1, 'FC_LOW': 0.0, 'FC_HIGH': 8, 'ORDER': 6, 'TIME_WIN': 0, 'GAMMA': 20, 'TWIN-': 0.0, 'TWIN+': 0.0, 'INV_VP_ITER': 0, 'INV_VS_ITER': 0, 'INV_RHO_ITER': 0, 'INV_QS_ITER': 0, 'SPATFILTER': 0, 'WD_DAMP': 0, 'WD_DAMP1': 0, 'EPRECOND': 3, 'LNORM': 2, 'ROWI': 0, 'STF_INV': 0, 'OFFSETC_STF': -4.0, 'EPS_STF': 0.1, 'NORMALIZE': 2, 'OFFSET_MUTE': 0, 'OFFSETC': 10, 'SCALERHO': 0.5, 'SCALEQS': 1.0, 'ENV': 1, 'N_ORDER': 0}
+
+Stage 2:
+	{'PRO': 1e-10, 'TIME_FILT': 1, 'FC_LOW': 0.0, 'FC_HIGH': 10, 'ORDER': 6, 'TIME_WIN': 0, 'GAMMA': 20, 'TWIN-': 0.0, 'TWIN+': 0.0, 'INV_VP_ITER': 0, 'INV_VS_ITER': 0, 'INV_RHO_ITER': 0, 'INV_QS_ITER': 0, 'SPATFILTER': 0, 'WD_DAMP': 0, 'WD_DAMP1': 0, 'EPRECOND': 3, 'LNORM': 2, 'ROWI': 0, 'STF_INV': 0, 'OFFSETC_STF': -4.0, 'EPS_STF': 0.1, 'NORMALIZE': 2, 'OFFSET_MUTE': 0, 'OFFSETC': 10, 'SCALERHO': 0.5, 'SCALEQS': 1.0, 'ENV': 1, 'N_ORDER': 0}
+
+NSRC:	59
+NREC:	1
+Init model:
+	150 x 496, dx = 25 m
+Check max source frequency:
+	min Vs: 866.0254037844387 m/s
+	min Vp: 1500.0 m/s
+	Number of gridpoints per minimum wavelength = 3.69
+	Maximum source wavelet frequency = 9.387809255115867 Hz
+Check domain decomposition for parallelization:
+	in X-direction, NX % NPROCX, 496 % 2 = 0
+	in Y-direction, NY % NPROCY, 150 % 1 = 0
+Write ./data/gradients/cnn_16/model_0/fld/start/model.vp
+Write ./data/gradients/cnn_16/model_0/fld/start/model.vs
+Write ./data/gradients/cnn_16/model_0/fld/start/model.rho
+Custom taper from taper.bin (vp), taper_u.bin (vs) and taper_rho.bin (rho)
+Enable streamer mode!
+	source 1: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_1
+	source 2: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_2
+	source 3: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_3
+	source 4: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_4
+	source 5: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_5
+	source 6: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_6
+	source 7: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_7
+	source 8: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_8
+	source 9: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_9
+	source 10: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_10
+	source 11: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_11
+	source 12: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_12
+	source 13: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_13
+	source 14: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_14
+	source 15: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_15
+	source 16: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_16
+	source 17: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_17
+	source 18: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_18
+	source 19: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_19
+	source 20: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_20
+	source 21: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_21
+	source 22: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_22
+	source 23: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_23
+	source 24: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_24
+	source 25: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_25
+	source 26: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_26
+	source 27: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_27
+	source 28: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_28
+	source 29: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_29
+	source 30: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_30
+	source 31: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_31
+	source 32: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_32
+	source 33: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_33
+	source 34: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_34
+	source 35: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_35
+	source 36: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_36
+	source 37: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_37
+	source 38: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_38
+	source 39: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_39
+	source 40: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_40
+	source 41: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_41
+	source 42: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_42
+	source 43: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_43
+	source 44: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_44
+	source 45: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_45
+	source 46: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_46
+	source 47: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_47
+	source 48: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_48
+	source 49: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_49
+	source 50: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_50
+	source 51: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_51
+	source 52: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_52
+	source 53: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_53
+	source 54: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_54
+	source 55: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_55
+	source 56: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_56
+	source 57: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_57
+	source 58: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_58
+	source 59: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_59
+Write wavelets, one for every shot.
+	wavelet 1: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_1.dat
+	wavelet 2: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_2.dat
+	wavelet 3: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_3.dat
+	wavelet 4: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_4.dat
+	wavelet 5: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_5.dat
+	wavelet 6: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_6.dat
+	wavelet 7: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_7.dat
+	wavelet 8: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_8.dat
+	wavelet 9: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_9.dat
+	wavelet 10: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_10.dat
+	wavelet 11: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_11.dat
+	wavelet 12: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_12.dat
+	wavelet 13: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_13.dat
+	wavelet 14: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_14.dat
+	wavelet 15: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_15.dat
+	wavelet 16: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_16.dat
+	wavelet 17: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_17.dat
+	wavelet 18: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_18.dat
+	wavelet 19: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_19.dat
+	wavelet 20: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_20.dat
+	wavelet 21: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_21.dat
+	wavelet 22: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_22.dat
+	wavelet 23: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_23.dat
+	wavelet 24: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_24.dat
+	wavelet 25: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_25.dat
+	wavelet 26: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_26.dat
+	wavelet 27: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_27.dat
+	wavelet 28: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_28.dat
+	wavelet 29: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_29.dat
+	wavelet 30: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_30.dat
+	wavelet 31: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_31.dat
+	wavelet 32: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_32.dat
+	wavelet 33: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_33.dat
+	wavelet 34: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_34.dat
+	wavelet 35: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_35.dat
+	wavelet 36: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_36.dat
+	wavelet 37: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_37.dat
+	wavelet 38: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_38.dat
+	wavelet 39: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_39.dat
+	wavelet 40: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_40.dat
+	wavelet 41: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_41.dat
+	wavelet 42: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_42.dat
+	wavelet 43: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_43.dat
+	wavelet 44: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_44.dat
+	wavelet 45: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_45.dat
+	wavelet 46: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_46.dat
+	wavelet 47: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_47.dat
+	wavelet 48: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_48.dat
+	wavelet 49: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_49.dat
+	wavelet 50: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_50.dat
+	wavelet 51: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_51.dat
+	wavelet 52: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_52.dat
+	wavelet 53: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_53.dat
+	wavelet 54: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_54.dat
+	wavelet 55: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_55.dat
+	wavelet 56: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_56.dat
+	wavelet 57: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_57.dat
+	wavelet 58: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_58.dat
+	wavelet 59: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_59.dat
+parameters file name= ./data/gradients/cnn_16/model_0/fld/seis_forward.inp
+Start simulation for 59 sources. NT: 3000, DT: 0.002...wait
+
+Disabled. Run in terminal:
+	mpirun -np 32 /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced/bin/denise  ./data/gradients/cnn_16/model_0/fld/seis_forward.inp ./data/gradients/cnn_16/model_0/fld/seis_fwi.inp
+Target data: ./data/gradients/cnn_16/model_0/fld/su/seis
+Create FWI workflow file in ./data/gradients/cnn_16/model_0/fld/seis_fwi.inp
+Init model:
+	150 x 496, dx = 25 m
+Check max source frequency:
+	min Vs: 866.0254037844387 m/s
+	min Vp: 1500.0 m/s
+	Number of gridpoints per minimum wavelength = 3.69
+	Maximum source wavelet frequency = 9.387809255115867 Hz
+Check domain decomposition for parallelization:
+	in X-direction, NX % NPROCX, 496 % 2 = 0
+	in Y-direction, NY % NPROCY, 150 % 1 = 0
+Write ./data/gradients/cnn_16/model_0/fld/start/model_init.vp
+Write ./data/gradients/cnn_16/model_0/fld/start/model_init.vs
+Write ./data/gradients/cnn_16/model_0/fld/start/model_init.rho
+Custom taper from taper.bin (vp), taper_u.bin (vs) and taper_rho.bin (rho)
+Enable streamer mode!
+	source 1: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_1
+	source 2: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_2
+	source 3: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_3
+	source 4: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_4
+	source 5: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_5
+	source 6: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_6
+	source 7: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_7
+	source 8: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_8
+	source 9: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_9
+	source 10: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_10
+	source 11: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_11
+	source 12: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_12
+	source 13: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_13
+	source 14: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_14
+	source 15: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_15
+	source 16: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_16
+	source 17: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_17
+	source 18: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_18
+	source 19: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_19
+	source 20: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_20
+	source 21: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_21
+	source 22: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_22
+	source 23: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_23
+	source 24: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_24
+	source 25: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_25
+	source 26: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_26
+	source 27: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_27
+	source 28: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_28
+	source 29: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_29
+	source 30: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_30
+	source 31: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_31
+	source 32: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_32
+	source 33: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_33
+	source 34: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_34
+	source 35: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_35
+	source 36: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_36
+	source 37: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_37
+	source 38: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_38
+	source 39: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_39
+	source 40: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_40
+	source 41: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_41
+	source 42: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_42
+	source 43: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_43
+	source 44: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_44
+	source 45: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_45
+	source 46: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_46
+	source 47: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_47
+	source 48: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_48
+	source 49: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_49
+	source 50: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_50
+	source 51: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_51
+	source 52: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_52
+	source 53: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_53
+	source 54: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_54
+	source 55: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_55
+	source 56: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_56
+	source 57: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_57
+	source 58: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_58
+	source 59: ./data/gradients/cnn_16/model_0/fld/receiver/receivers_shot_59
+Write wavelets, one for every shot.
+	wavelet 1: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_1.dat
+	wavelet 2: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_2.dat
+	wavelet 3: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_3.dat
+	wavelet 4: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_4.dat
+	wavelet 5: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_5.dat
+	wavelet 6: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_6.dat
+	wavelet 7: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_7.dat
+	wavelet 8: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_8.dat
+	wavelet 9: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_9.dat
+	wavelet 10: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_10.dat
+	wavelet 11: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_11.dat
+	wavelet 12: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_12.dat
+	wavelet 13: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_13.dat
+	wavelet 14: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_14.dat
+	wavelet 15: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_15.dat
+	wavelet 16: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_16.dat
+	wavelet 17: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_17.dat
+	wavelet 18: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_18.dat
+	wavelet 19: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_19.dat
+	wavelet 20: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_20.dat
+	wavelet 21: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_21.dat
+	wavelet 22: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_22.dat
+	wavelet 23: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_23.dat
+	wavelet 24: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_24.dat
+	wavelet 25: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_25.dat
+	wavelet 26: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_26.dat
+	wavelet 27: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_27.dat
+	wavelet 28: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_28.dat
+	wavelet 29: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_29.dat
+	wavelet 30: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_30.dat
+	wavelet 31: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_31.dat
+	wavelet 32: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_32.dat
+	wavelet 33: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_33.dat
+	wavelet 34: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_34.dat
+	wavelet 35: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_35.dat
+	wavelet 36: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_36.dat
+	wavelet 37: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_37.dat
+	wavelet 38: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_38.dat
+	wavelet 39: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_39.dat
+	wavelet 40: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_40.dat
+	wavelet 41: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_41.dat
+	wavelet 42: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_42.dat
+	wavelet 43: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_43.dat
+	wavelet 44: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_44.dat
+	wavelet 45: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_45.dat
+	wavelet 46: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_46.dat
+	wavelet 47: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_47.dat
+	wavelet 48: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_48.dat
+	wavelet 49: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_49.dat
+	wavelet 50: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_50.dat
+	wavelet 51: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_51.dat
+	wavelet 52: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_52.dat
+	wavelet 53: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_53.dat
+	wavelet 54: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_54.dat
+	wavelet 55: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_55.dat
+	wavelet 56: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_56.dat
+	wavelet 57: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_57.dat
+	wavelet 58: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_58.dat
+	wavelet 59: ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet_shot_59.dat
+parameters file name= ./data/gradients/cnn_16/model_0/fld/seis_inversion.inp
+Start simulation for 59 sources. NT: 3000, DT: 0.002...wait
+
+Disabled. Run in terminal:
+	mpirun -np 32 /Users/pavelplotnitskii/Dropbox/Log_extrapolation/scripts/paper_reproduced/bin/denise  ./data/gradients/cnn_16/model_0/fld/seis_inversion.inp ./data/gradients/cnn_16/model_0/fld/seis_fwi.inp
+Program finished after 0:00:02.398850
+time now= 2023-03-10 14:32:09.177594
+processed data in  ./data/gradients/cnn_16/model_0
+#-----------------------------------------------------------------
+#      PARAMETER FILE FOR DENISE BLACK-EDITION
+#-----------------------------------------------------------------
+# description:
+# description/name of the model: Marmousi-II
+#
+# ------------------ DENISE Mode ---------------------------------
+# Operation mode:
+(forward_modelling_only=0;FWI=1;RTM=2)_(MODE) = 1
+#
+# ---------------- DENISE Physics -----------------------------
+(2D-PSV=1;2D-AC=2;2D-VTI=3;2D-TTI=4;2D-SH=5)_(PHYSICS) = 1
+#
+#-------------- Domain Decomposition -----------------------------
+number_of_processors_in_x-direction_(NPROCX) = 2
+number_of_processors_in_y-direction_(NPROCY) = 1
+#
+#-------------------- FD order -----------------------------------
+# Order of ssg FD coefficients (values: 2, 4, ..., 12)
+FD_ORDER = 8
+# Maximum relative group velocity error E
+# (minimum number of grid points per shortest wavelength is defined by FD_ORDER and E)
+# values: 0 = Taylor coefficients
+#	  1 = Holberg coeff.: E = 0.1 %
+#	  2 =                 E = 0.5 %
+#	  3 =                 E = 1.0 %
+#         4 =                 E = 3.0 %
+max_relative_error = 1
+#-------------------- 2-D Grid -----------------------------------
+number_of_gridpoints_in_x-direction_(NX) = 496
+number_of_gridpoints_in_y-direction_(NY) = 150
+distance_between_gridpoints(in_m)_(DH) = 25
+#
+# Note that y denotes the vertical direction !
+#
+#-------------------Time Stepping -------------------------------
+time_of_wave_propagation_(in_sec)_(TIME) = 6.0
+timestep_(in_seconds)_(DT) = 0.002
+#
+#--------------------Source---------------------------------------
+# Shape_of_source-signal:
+(ricker=1;fumue=2;from_SOURCE_FILE=3;SIN**3=4;Gaussian_deriv=5;Spike=6;Klauder=7)_(QUELLART) = 3
+SIGNAL_FILE = ./data/gradients/cnn_16/model_0/fld/wavelet/wavelet
+duration_of_Klauder_wavelet_(in_seconds)_(TS) = 8.0
+read_source_positions_from_SOURCE_FILE_(yes=1)_(SRCREC) = 1
+SOURCE_FILE = ./data/gradients/cnn_16/model_0/fld/source/sources.dat
+run_multiple_shots_defined_in_SOURCE_FILE_(yes=1)_(RUN_MULTIPLE_SHOTS) = 1
+corner_frequency_of_highpass_filtered_spike_(FC_SPIKE_1) = -5.0
+corner_frequency_of_lowpass_filtered_spike_(FC_SPIKE_2) = 15.0
+order_of_Butterworth_filter_(ORDER_SPIKE) = 5
+write_source_wavelet_(yes=1)_(WRITE_STF) = 0
+#
+#
+#--------------------- Model -------------------------------------
+read_model_parameters_from_MFILE(yes=1)(READMOD) = 1
+MFILE = ./data/gradients/cnn_16/model_0/fld/start/model_init
+write_model_files_(yes=1)_(WRITEMOD) = 1
+#
+#---------------------Q-approximation-----------------------------
+Number_of_relaxation_mechanisms_(L) = 0
+L_Relaxation_frequencies_(FL) = 20000.0
+Tau_(TAU) = 1.0
+#
+#----------------------Free Surface-------------------------------
+free_surface_(yes=1)(FREE_SURF) = 1
+#
+#--------------------PML Boundary---------------------------
+# quadratic damping applied
+width_of_absorbing_frame_(in_gridpoints)_(No<=0)_(FW) = 10
+Damping_velocity_in_CPML_(in_m/s)_(DAMPING) = 1500.0
+Frequency_within_the_PML_(Hz)_(FPML) = 10.0
+npower = 4.0
+k_max_PML = 1.0
+# apply_periodic_boundary_condition_at_edges_(BOUNDARY):
+(no=0)_(left_and_right=1) = 0
+#
+#----------------------Snapshots----------------------------------
+output_of_snapshots_(SNAP)(yes>0) = 0
+# output of particle velocities: SNAP=1
+# output of pressure field: SNAP=2
+# output of curl and divergence energy: SNAP=3
+# output of both particle velocities and energy : SNAP=4
+write_snapshots_for_shot_no_(SNAP_SHOT) = 1
+first_snapshot_(in_sec)_(TSNAP1) = 0.002
+last_snapshot_(in_sec)_(TSNAP2) = 3.0
+increment_(in_sec)_(TSNAPINC) = 0.06
+increment_x-direction_(IDX) = 1
+increment_y-direction_(IDY) = 1
+data-format_(SNAP_FORMAT)(ASCII(2);BINARY(3)) = 3
+basic_filename_(SNAP_FILE) = ./data/gradients/cnn_16/model_0/fld/snap/waveform_forward
+#
+#----------------------Receiver-----------------------------------
+output_of_seismograms_(SEISMO) = 2
+# SEISMO=0: no seismograms
+# SEISMO=1: particle-velocities
+# SEISMO=2: pressure (hydrophones)
+# SEISMO=3: curl and div
+# SEISMO=4: everything
+read_receiver_positions_from_file_(single_file=1/multiple_files=2)_(READREC) = 2
+REC_FILE = ./data/gradients/cnn_16/model_0/fld/receiver/receivers
+reference_point_for_receiver_coordinate_system_(REFREC) = 0.0, 0.0
+#
+#
+#----------------- Towed streamer ------!!!!!DEPRECATED use READREC=2 instead---
+#!!!!!DEPRECATED use READREC=2 instead--- parameters for towed streamer acquisition
+The_first_(N_STREAMER)_receivers_in_REC_FILE_belong_to_streamer = 1
+Cable_increment_per_shot_(REC_INCR_X) = 200
+Cable_increment_per_shot_(REC_INCR_Y) = 0
+#------!!!!!DEPRECATED use READREC=2 instead---
+#
+#--------------------  Seismograms  --------------------------------
+samplingrate_(in_timesteps!)_(NDT) = 1
+data-format_(SU(1);ASCII(2);BINARY(3)) = 1
+# output files for seismograms
+# particle velocities (if SEISMO=1 or SEISMO=4)
+filename_for_Vx_(SEIS_FILE_VX) = ./data/gradients/cnn_16/model_0/fld/su/seis_x.su
+filename_for_Vy_(SEIS_FILE_VY) = ./data/gradients/cnn_16/model_0/fld/su/seis_y.su
+# curl and div of wavefield (if SEISMO=3 or SEISMO=4)
+filename_for_curl_(SEIS_FILE_CURL) = ./data/gradients/cnn_16/model_0/fld/su/seis_rot.su
+filename_for_div_(SEIS_FILE_DIV) = ./data/gradients/cnn_16/model_0/fld/su/seis_div.su
+# pressure field (hydrophones) (if SEISMO=2 or SEISMO=4)
+filename_for_pressure_(SEIS_FILE_P) = ./data/gradients/cnn_16/model_0/fld/su/seis_p.su
+#  
+#----------------------------------------------------------------
+# each PE is printing log-information to LOG_FILE.MYID
+log-file_for_information_about_progress_of_program_(LOG_FILE) = ./data/gradients/cnn_16/model_0/fld/log/seis.log
+info_of_processing_element_zero_to_stdout_(yes=1/no=0)_(LOG) = 1
+#----------------------------------------------------------------
+# DENISE_elastic specific parameters
+number_of_TDFWI_iterations_(ITERMAX) = 5
+output_of_jacobian_(JACOBIAN) = ./data/gradients/cnn_16/model_0/fld/jacobian/gradient_Test
+seismograms_of_measured_data_(DATA_DIR) = ./data/gradients/cnn_16/model_0/fld/su/seis
+cosine_taper_(yes=1/no=0)_(TAPER) = 0
+taper_length_(in_rec_numbers)_(TAPERLENGTH) = 4
+gradient_taper_geometry_(GRADT1,GRADT2,GRADT3,GRADT4) = 9,14,490,500
+type_of_material_parameters_to_invert_(Vp,Vs,rho=1/Zp,Zs,rho=2/lam,mu,rho=3)_(INVMAT1) = 1
+gradient_formulation_(GRAD_FORM) = 1
+adjoint_source_type_(x-y_components=1/y_comp=2/x_comp=3/p_comp=4/x-p_comp=5/y-p_comp=6/x-y-p_comp=7)_(QUELLTYPB) = 4
+#
+#  25,75,10   5,1,3
+testshots_for_step_length_estimation_(TESTSHOT_START,TESTSHOT_END,TESTSHOT_INCR) = 1,59,5
+#
+#
+# ----- Definition of gradient taper geometry ----- #
+# Vertical taper
+apply_vertical_taper_(yes=1)_(SWS_TAPER_GRAD_VERT) = 0
+# Horizontal taper
+apply_horizontal_taper_(yes=1)_(SWS_TAPER_GRAD_HOR) = 1
+exponent_of_depth_scaling_for_preconditioning_(EXP_TAPER_GRAD_HOR) = 2.0
+# Circular taper around all sources (not at receiver positions)
+apply_cylindrical_taper_(yes=1)_(SWS_TAPER_GRAD_SOURCES) = 0
+apply_cylindrical_taper_per_shot_(yes=1)_(SWS_TAPER_CIRCULAR_PER_SHOT) = 0
+(1=error_function,2=log_function)_(SRTSHAPE) = 1
+radius_in_m_(SRTRADIUS) = 5.0
+# --> minimum for SRTRADIUS is 5x5 gridpoints
+filtsize_in_gridpoints_(FILTSIZE) = 1
+read_taper_from_file_(yes=1)_(SWS_TAPER_FILE) = 1
+taper_file_basename_(TFILE) = ./data/gradients/cnn_16/model_0/fld/taper/taper
+#
+#
+# ----- Output of inverted models ----- #
+write_inverted_model_after_each_iteration_(yes=1)_(INV_MOD_OUT) = 1
+output_of_models_(INV_MODELFILE) = ./data/gradients/cnn_16/model_0/fld/model/modelTest
+#
+#
+# ----- Upper and lower limits for model parameters ----- #
+upper_limit_for_vp/lambda_(VPUPPERLIM) = 3452.98476388951
+lower_limit_for_vp/lambda_(VPLOWERLIM) = 1500.0
+upper_limit_for_vs/mu_(VSUPPERLIM) = 1993.581682939285
+lower_limit_for_vs/mu_(VSLOWERLIM) = 0.0
+upper_limit_for_rho_(RHOUPPERLIM) = 2299.6933015982154
+lower_limit_for_rho_(RHOLOWERLIM) = 1000.0
+upper_limit_for_qs_(QSUPPERLIM) = 100.0
+lower_limit_for_qs_(QSLOWERLIM) = 10.0
+#
+#
+# ----- Optimization-Method ------ #
+gradient_method_(PCG=1/LBFGS=2)_(GRAD_METHOD) = 2
+PCG_BETA_(Fletcher_Reeves=1/Polak_Ribiere=2/Hestenes_Stiefel=3/Dai_Yuan=4) = 2
+save_(NLBFGS)_updates_during_LBFGS_optimization = 20
+#
+#
+#----- Definition of smoothing the models vp and vs ----- #
+apply_spatial_filtering_(1=yes)_(MODEL_FILTER) = 0
+filter_length_in_gridpoints_(FILT_SIZE) = 5
+#
+#
+#----- Reduce size of inversion grid ------#
+use_only_every_DTINV_time_sample_for_gradient_calculation_(DTINV) = 3
+#
+#
+#----- Step length estimation ------# 
+maximum_model_change_of_maximum_model_value_(EPS_SCALE) = 0.01
+maximum_number_of_attemps_to_find_a_step_length_(STEPMAX) = 200
+SCALEFAC = 2.0
+#
+#
+#----- Trace killing -----#
+apply_trace_killing_(yes=1)_(TRKILL) = 0
+TRKILL_FILE = ./data/gradients/cnn_16/model_0/fld/trace_kill/trace_kill.dat
+#
+#
+#----- Time windowing and damping -----#
+files_with_picked_times_(PICKS_FILE) = ./data/gradients/cnn_16/model_0/fld/picked_times/picks_
+#
+#
+#----- MISFIT LOG FILE -----#
+log_file_for_misfit_evolution_(MISFIT_LOG_FILE) = ./data/gradients/cnn_16/model_0/fld/seis_fwi_log.dat
+#
+#
+# ----- Minimum number of iteration per frequency ----- #
+MIN_ITER = 0
+#
+# ----- Definition of smoothing the Jacobians with 2D-Gaussian ----- #
+apply_spatial_filtering_(yes=1)_(GRAD_FILTER) = 0
+filter_length_in_gridpoints_(FILT_SIZE_GRAD) = 10
+#
+# ----- FWT double-difference time-lapse mode ---------------------------- #
+activate_time_lapse_mode_(yes=1)_(TIMELAPSE) = 0
+# if TIMELAPSE == 1, DATA_DIR should be the directory containing the data differences
+# between time t0 and t1 
+seismograms_of_synthetic_data_at_t0_(DATA_DIR_T0) = ./data/gradients/cnn_16/model_0/fld/su/CAES_spike_time_0/seis_CAES
+#
+# ----- Reverse Time Modelling ------------------------- #
+apply_reverse_time_modelling_(yes=1)_(RTMOD) = 0
+#
+#
+# ----- Gravity Modelling/Inversion -----#
+# no gravity modelling and inversion: GRAVITY=0
+# activate only gravity modelling: GRAVITY=1
+# activate gravity modelling and inversion: GRAVITY=2
+active_gravity_modelling_(=1)_and_inversion_(=2)_(GRAVITY) = 0
+# boundaries in x-direction in gridpoints
+boundary_gridpoints_in_x_(NGRAVB) = 500
+# boundaries in z-direction in meter
+boundary_meter_in_z_(NZGRAV) = 200000
+# model and invert gravity data: GRAV_TYPE=1
+# model and invert gravity gradient data: GRAV_TYPE=2
+use_of_gravity_(=1)_or_gravity_gradient_(=2)_data_(GRAV_TYPE) = 1
+# use initial density model (=1) ,only reasonable for inversion, as background density or self-defined model (=2)
+chosen_background_density_model_(BACK_DENSITY) = 2
+# if BACK_DENSITY = 2, define your model 
+filename_for_background_density_(DFILE) = ./data/gradients/cnn_16/model_0/fld/gravity/background_density.rho
+#
+# ----- RTM parameters ---------------------------- #
+output_of_RTM_result_for_each_shot_(yes=1)_(RTM_SHOT) = 0
+#
+
+Backend MacOSX is interactive backend. Turning interactive mode on.
